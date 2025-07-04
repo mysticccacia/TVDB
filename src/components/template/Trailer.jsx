@@ -32,7 +32,7 @@ const Trailer = () => {
     <div className="fixed  z-100 top-0 left-0 bg-gray-900 w-screen h-screen flex items-center justify-center">
       <i
         onClick={() => navigate(-1)}
-        className="hover:text-[#6556cd] text-2xl text-white absolute top-[5%] left-[5%] font-extrabold  mr-4  ri-close-line"
+        className="hover:text-[#6556cd] text-2xl mb-[5%] text-white absolute top-[5%] left-[5%] font-extrabold  mr-4  ri-close-line"
       ></i>
       <ReactPlayer
         controls
