@@ -95,19 +95,29 @@ const Tvdetails = () => {
                 alt=""
               />
 
-              <div className="bg-[#032541] rounded-b-xl gap-5 w-full  flex items-center justify-center p-[3%]">
-                {info?.watchProviders?.flatrate?.[0] && (
-                  <img
-                    className="w-[5vh] object-fit"
-                    src={`https://image.tmdb.org/t/p/original/${info.watchProviders.flatrate[0].logo_path}`}
-                    alt=""
-                  />
+              <div className="bg-[#032541] rounded-b-xl gap-5 w-full p-[3%]">
+                <div className="text-white flex justify-center gap-3 items-center py-2 ">
+                   {info?.watchProviders?.flatrate?.[0] ? (
+                  <>
+                    <img
+                      className="w-[5vh] object-fit"
+                      src={`https://image.tmdb.org/t/p/original/${info.watchProviders.flatrate[0].logo_path}`}
+                      alt=""
+                    />
+                    <div className="text-white py-2 w-[50%]">
+                      <h1 className="text-[1vw] leading-none">Now Streaming</h1>
+                      <h1 className="text-[1.3vw] leading-none font-semibold">
+                        Watch Now
+                      </h1>
+                    </div>
+                  </>
+                ) : (
+                  <div className="text-white py-2 w-full">
+                    <h1 className="text-[1vw] text-center font-semibold">
+                      Not Available to Stream
+                    </h1>
+                  </div>
                 )}
-                <div className="text-white py-2  w-[50%]">
-                  <h1 className="text-[1vw] leading-none">Now Streaming</h1>
-                  <h1 className="text-[1.3vw] leading-none font-semibold">
-                    Watch Now
-                  </h1>
                 </div>
               </div>
             </div>
